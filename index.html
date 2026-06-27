@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predictor Mundial 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold:#d4af37; --green:#0a4a1a; --green2:#0d6b28; --dark:#070e07;
+    --panel:#0f1f0f; --panel2:#162816; --border:#1e3d1e;
+    --text:#e8e8e8; --muted:#7a9a7a; --win:#27ae60; --radius:6px;
+  }
+  body { background:var(--dark); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; min-height:100vh; padding-bottom:60px; }
+
+  header { background:linear-gradient(135deg,#000 0%,var(--green) 60%,#000 100%); border-bottom:2px solid var(--gold); padding:16px 24px; display:flex; align-items:center; gap:16px; }
+  header .logo { font-size:2rem; }
+  header h1 { font-size:1.5rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+  header p { font-size:.78rem; color:var(--muted); }
+  .badge { background:var(--panel2); border:1px solid var(--gold); color:var(--gold); font-size:.7rem; padding:4px 10px; border-radius:20px; font-weight:700; letter-spacing:1px; }
+  #model-status { font-size:.65rem; color:var(--muted); margin-top:3px; }
+
+  main { max-width:1600px; margin:0 auto; padding:20px 12px; }
+  .bracket-wrapper { display:flex; gap:12px; overflow-x:auto; align-items:flex-start; padding-bottom:40px; }
+
+  .round-section { display:flex; flex-direction:column; gap:8px; min-width:140px; }
+  .round-col-label { font-size:.55rem; text-align:center; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); opacity:.7; padding-bottom:4px; border-bottom:1px solid var(--border); margin-bottom:4px; }
+
+  .match { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+  .match.locked { opacity:.45; pointer-events:none; }
+  .match:hover:not(.locked) { border-color:var(--gold); }
+  .match-header { background:var(--panel2); padding:3px 8px; font-size:.55rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; font-weight:700; border-bottom:1px solid var(--border); }
+
+  .team-row { display:flex; align-items:center; gap:6px; padding:5px 8px; border-bottom:1px solid var(--border); }
+  .team-row:last-of-type { border-bottom:none; }
+  .team-row.winner { background:rgba(39,174,96,.15); }
+  .team-flag { font-size:1rem; min-width:20px; }
+  .team-input { flex:1; background:transparent; border:none; color:var(--text); font-size:.75rem; font-weight:600; outline:none; min-width:0; }
+  .team-input::placeholder { color:var(--muted); font-weight:400; }
+  .team-input:focus { color:var(--gold); }
+  .team-score { background:var(--panel2); border:1px solid var(--border); color:var(--gold); font-weight:800; font-size:.8rem; width:24px; text-align:center; border-radius:3px; padding:1px 0; min-width:24px; }
+  .team-score.win { background:var(--win); color:#fff; border-color:var(--win); }
+
+  .match-footer { background:var(--panel2); border-top:1px solid var(--border); padding:4px 8px; display:flex; align-items:center; justify-content:space-between; }
+  .pen-badge { font-size:.55rem; color:#e67e22; font-weight:700; }
+
+  .btn-predict { background:linear-gradient(135deg,var(--gold) 0%,#a07828 100%); color:#000; border:none; border-radius:3px; padding:3px 10px; font-size:.62rem; font-weight:800; cursor:pointer; letter-spacing:1px; text-transform:uppercase; }
+  .btn-predict:hover { opacity:.85; }
+  .btn-predict:disabled { opacity:.4; cursor:not-allowed; }
+
+  /* Centro */
+  .center-col { display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:0 16px; gap:10px; min-width:130px; padding-top:20px; }
+  .trophy { font-size:3.5rem; filter:drop-shadow(0 0 16px var(--gold)); animation:glow 2s ease-in-out infinite alternate; }
+  @keyframes glow { from{filter:drop-shadow(0 0 8px var(--gold))} to{filter:drop-shadow(0 0 24px #ffe066)} }
+  .final-card { background:linear-gradient(135deg,#0a1a0a,var(--panel2)); border:2px solid var(--gold); border-radius:10px; padding:12px 14px; text-align:center; width:100%; }
+  .final-label { font-size:.62rem; font-weight:800; letter-spacing:3px; color:var(--gold); text-transform:uppercase; }
+  .final-match { display:flex; align-items:center; justify-content:center; gap:8px; margin:6px 0 4px; font-weight:700; font-size:.78rem; flex-wrap:wrap; }
+  .final-vs { color:var(--muted); font-size:.68rem; }
+  .champion-card { background:linear-gradient(135deg,var(--gold) 0%,#8b6914 100%); border-radius:6px; padding:6px 10px; margin-top:8px; font-weight:800; font-size:.8rem; color:#000; display:none; align-items:center; justify-content:center; gap:6px; }
+
+  /* Toast */
+  #toast { position:fixed; bottom:20px; right:20px; background:var(--panel2); border:1px solid var(--gold); color:var(--text); padding:10px 16px; border-radius:8px; font-size:.8rem; opacity:0; transform:translateY(8px); transition:opacity .3s,transform .3s; pointer-events:none; max-width:300px; z-index:999; }
+  #toast.show { opacity:1; transform:translateY(0); }
+
+  .spin { display:inline-block; width:10px; height:10px; border:2px solid rgba(0,0,0,.3); border-top-color:#000; border-radius:50%; animation:spin .6s linear infinite; vertical-align:middle; }
+  @keyframes spin { to{transform:rotate(360deg)} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">⚽</div>
+  <div>
+    <h1>Predictor Mundial 2026</h1>
+    <p>Escribe los países → pulsa Predecir → el ganador avanza automáticamente</p>
+  </div>
+  <div style="margin-left:auto;text-align:right">
+    <div class="badge">RandomForest · v2</div>
+    <div id="model-status">verificando…</div>
+  </div>
+</header>
+
+<main>
+  <!-- SECCIÓN DE PREDICCIÓN PERSONALIZADA -->
+  <div style="background:var(--panel); border:2px solid var(--gold); border-radius:8px; padding:20px; margin-bottom:30px; max-width:600px; margin-left:auto; margin-right:auto;">
+    <h2 style="color:var(--gold); font-size:1.1rem; margin-bottom:15px; text-align:center; letter-spacing:1px;">⚡ PREDICTOR PERSONALIZADO</h2>
+    <div style="display:flex; gap:10px; margin-bottom:15px;">
+      <input type="text" id="custom-t1" placeholder="País 1" style="flex:1; background:var(--panel2); border:1px solid var(--border); color:var(--text); padding:10px; border-radius:4px; font-weight:600;">
+      <input type="text" id="custom-t2" placeholder="País 2" style="flex:1; background:var(--panel2); border:1px solid var(--border); color:var(--text); padding:10px; border-radius:4px; font-weight:600;">
+      <button id="btn-custom-predict" style="background:linear-gradient(135deg,var(--gold) 0%,#a07828 100%); color:#000; border:none; border-radius:4px; padding:10px 20px; font-weight:800; cursor:pointer; text-transform:uppercase; letter-spacing:1px;">Predecir</button>
+    </div>
+    <div id="custom-result" style="background:var(--panel2); border:1px solid var(--border); border-radius:4px; padding:15px; display:none;">
+      <div style="text-align:center; color:var(--gold); font-weight:800; margin-bottom:10px;">RESULTADO</div>
+      <div style="display:flex; justify-content:space-around; align-items:center; gap:10px;">
+        <div style="flex:1; text-align:center;">
+          <div style="font-size:0.9rem; color:var(--text); margin-bottom:5px;" id="custom-team1">—</div>
+          <div style="font-size:1.5rem; font-weight:800; color:var(--gold);" id="custom-goals1">-</div>
+        </div>
+        <div style="color:var(--muted); font-weight:700;">VS</div>
+        <div style="flex:1; text-align:center;">
+          <div style="font-size:0.9rem; color:var(--text); margin-bottom:5px;" id="custom-team2">—</div>
+          <div style="font-size:1.5rem; font-weight:800; color:var(--gold);" id="custom-goals2">-</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:10px; font-size:0.85rem; color:var(--muted);" id="custom-winner"></div>
+      <div style="text-align:center; margin-top:5px; font-size:0.75rem; color:#e67e22;" id="custom-penalty"></div>
+    </div>
+  </div>
+
+  <div class="bracket-wrapper">
+    
+    <!-- 16AVOS IZQUIERDA -->
+    <div class="round-section">
+      <div class="round-col-label">16avos</div>
+      <div id="col-16-L"></div>
+    </div>
+
+    <!-- 8AVOS IZQUIERDA -->
+    <div class="round-section">
+      <div class="round-col-label">8avos</div>
+      <div id="col-8-L"></div>
+    </div>
+
+    <!-- CUARTOS IZQUIERDA -->
+    <div class="round-section">
+      <div class="round-col-label">Cuartos</div>
+      <div id="col-4-L"></div>
+    </div>
+
+    <!-- SEMIFINAL IZQUIERDA -->
+    <div class="round-section">
+      <div class="round-col-label">Semifinal</div>
+      <div id="col-semi-L"></div>
+    </div>
+
+    <!-- CENTRO -->
+    <div class="center-col">
+      <div class="trophy">🏆</div>
+      <div class="final-card">
+        <div class="final-label">Final</div>
+        <div class="final-match">
+          <span id="finalist-L">—</span>
+          <span class="final-vs">vs</span>
+          <span id="finalist-R">—</span>
+        </div>
+        <button class="btn-predict" id="btn-final" disabled>Predecir Final</button>
+        <div class="champion-card" id="champion-card">
+          🏆 <span id="champion-name"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEMIFINAL DERECHA -->
+    <div class="round-section">
+      <div class="round-col-label">Semifinal</div>
+      <div id="col-semi-R"></div>
+    </div>
+
+    <!-- CUARTOS DERECHA -->
+    <div class="round-section">
+      <div class="round-col-label">Cuartos</div>
+      <div id="col-4-R"></div>
+    </div>
+
+    <!-- 8AVOS DERECHA -->
+    <div class="round-section">
+      <div class="round-col-label">8avos</div>
+      <div id="col-8-R"></div>
+    </div>
+
+    <!-- 16AVOS DERECHA -->
+    <div class="round-section">
+      <div class="round-col-label">16avos</div>
+      <div id="col-16-R"></div>
+    </div>
+
+  </div>
+</main>
+
+<div id="toast"></div>
+
+<script>
+const API = 'http://127.0.0.1:5000';
+
+// 32 equipos en dieciséisavos = 16 partidos
+const PARTIDOS_16 = [
+  ['Alemania','Paraguay'],   ['Brasil','Japón'],
+  ['Francia','Suecia'],      ['Irlanda','Noruega'],
+  ['Sudáfrica','Canadá'],    ['México','Colombia'],
+  ['Países Bajos','Marruecos'],['Argentina','Australia'],
+  ['Uruguay','Perú'],        ['Chile','Bolivia'],
+  ['Ecuador','Venezuela'],   ['Colombia','Panamá'],
+  ['Costa Rica','Honduras'], ['Jamaica','Belice'],
+  ['Guatemala','El Salvador'],['Nicaragua','Haití']
+];
+
+const BTN_HANDLERS = {};
+const state = {
+  r16:  { L:[null,null,null,null,null,null,null,null], R:[null,null,null,null,null,null,null,null] },
+  r8:   { L:[null,null,null,null],                      R:[null,null,null,null] },
+  r4:   { L:[null,null],                                R:[null,null] },
+  semi: { L:null,                                        R:null  },
+};
+
+const FLAGS = {
+  'Alemania':'🇩🇪','Argentina':'🇦🇷','Australia':'🇦🇺','Austria':'🇦🇹',
+  'Bélgica':'🇧🇪','Bolivia':'🇧🇴','Brasil':'🇧🇷','Camerún':'🇨🇲',
+  'Canadá':'🇨🇦','Chile':'🇨🇱','China':'🇨🇳','Colombia':'🇨🇴',
+  'Corea del Sur':'🇰🇷','Costa Rica':'🇨🇷','Croacia':'🇭🇷','Belice':'🇧🇿',
+  'Dinamarca':'🇩🇰','Ecuador':'🇪🇨','Egipto':'🇪🇬','España':'🇪🇸','El Salvador':'🇸🇻',
+  'Estados Unidos':'🇺🇸','Francia':'🇫🇷','Ghana':'🇬🇭','Grecia':'🇬🇷','Guatemala':'🇬🇹','Haití':'🇭🇹',
+  'Honduras':'🇭🇳','Hungría':'🇭🇺','Inglaterra':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Irán':'🇮🇷',
+  'Irlanda':'🇮🇪','Italia':'🇮🇹','Jamaica':'🇯🇲','Japón':'🇯🇵','Marruecos':'🇲🇦',
+  'México':'🇲🇽','Nicaragua':'🇳🇮','Nigeria':'🇳🇬','Noruega':'🇳🇴','Nueva Zelanda':'🇳🇿',
+  'Países Bajos':'🇳🇱','Panamá':'🇵🇦','Paraguay':'🇵🇾','Perú':'🇵🇪',
+  'Polonia':'🇵🇱','Portugal':'🇵🇹','Qatar':'🇶🇦','Rumania':'🇷🇴',
+  'Senegal':'🇸🇳','Serbia':'🇷🇸','Sudáfrica':'🇿🇦','Suecia':'🇸🇪',
+  'Suiza':'🇨🇭','Turquía':'🇹🇷','Ucrania':'🇺🇦','Uruguay':'🇺🇾',
+  'Venezuela':'🇻🇪','Arabia Saudita':'🇸🇦','Bosnia':'🇧🇦',
+  'Escocia':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','Gales':'🏴󠁧󠁢󠁷󠁬󠁳󠁿',
+};
+function flag(pais){ return FLAGS[pais] || '🏳️'; }
+
+function makeCard(id, round, t1='', t2='', locked=false) {
+  const div = document.createElement('div');
+  div.className = 'match' + (locked ? ' locked' : '');
+  div.id = id;
+  div.innerHTML = `
+    <div class="match-header">${round}</div>
+    <div class="team-row" id="${id}-row1">
+      <span class="team-flag" id="${id}-f1">${flag(t1)}</span>
+      <input class="team-input" id="${id}-t1" value="${t1}" placeholder="País 1" ${locked?'readonly':''}>
+      <span class="team-score" id="${id}-s1">-</span>
+    </div>
+    <div class="team-row" id="${id}-row2">
+      <span class="team-flag" id="${id}-f2">${flag(t2)}</span>
+      <input class="team-input" id="${id}-t2" value="${t2}" placeholder="País 2" ${locked?'readonly':''}>
+      <span class="team-score" id="${id}-s2">-</span>
+    </div>
+    <div class="match-footer">
+      <span class="pen-badge" id="${id}-pen"></span>
+      <button class="btn-predict" id="${id}-btn">Predecir</button>
+    </div>
+  `;
+  return div;
+}
+
+function buildBracket() {
+  ['L','R'].forEach(side => {
+    const c16 = document.getElementById(`col-16-${side}`);
+    const c8 = document.getElementById(`col-8-${side}`);
+    const c4 = document.getElementById(`col-4-${side}`);
+    const cs = document.getElementById(`col-semi-${side}`);
+
+    // 16avos (8 partidos por lado)
+    for (let i = 0; i < 8; i++) {
+      const partido = side === 'L' ? PARTIDOS_16[i*2] : PARTIDOS_16[i*2+1];
+      const id = `m16-${side}-${i}`;
+      c16.appendChild(makeCard(id, '16avos', partido[0], partido[1]));
+      BTN_HANDLERS[id] = () => runPredict(id, side, 'r16', i);
+    }
+
+    // 8avos (4 partidos por lado)
+    for (let i = 0; i < 4; i++) {
+      const id = `m8-${side}-${i}`;
+      c8.appendChild(makeCard(id, '8avos', '', '', true));
+      BTN_HANDLERS[id] = () => runPredict(id, side, 'r8', i);
+    }
+
+    // Cuartos (2 partidos por lado)
+    for (let i = 0; i < 2; i++) {
+      const id = `m4-${side}-${i}`;
+      c4.appendChild(makeCard(id, 'Cuartos', '', '', true));
+      BTN_HANDLERS[id] = () => runPredict(id, side, 'r4', i);
+    }
+
+    // Semis (1 por lado)
+    const ids = `mS-${side}`;
+    cs.appendChild(makeCard(ids, 'Semifinal', '', '', true));
+    BTN_HANDLERS[ids] = () => runPredict(ids, side, 'semi', 0);
+  });
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.btn-predict');
+    if (!btn) return;
+    if (btn.id === 'btn-final') { runFinal(); return; }
+    const matchId = btn.id.replace('-btn','');
+    if (BTN_HANDLERS[matchId]) BTN_HANDLERS[matchId]();
+  });
+
+  document.getElementById('btn-final').addEventListener('click', runFinal);
+  document.getElementById('btn-custom-predict').addEventListener('click', predictCustom);
+}
+
+async function runPredict(id, side, round, idx) {
+  const eq1 = document.getElementById(`${id}-t1`).value.trim();
+  const eq2 = document.getElementById(`${id}-t2`).value.trim();
+  if (!eq1 || !eq2) { toast('⚠️ Escribe los dos países'); return; }
+
+  const btn = document.getElementById(`${id}-btn`);
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>';
+
+  try {
+    const data = await fetch(`${API}/predecir`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({equipo1: eq1, equipo2: eq2})
+    }).then(r => r.json());
+
+    if (data.error) throw new Error(data.error);
+
+    const s1 = document.getElementById(`${id}-s1`);
+    const s2 = document.getElementById(`${id}-s2`);
+    s1.textContent = data.g1;
+    s2.textContent = data.g2;
+    s1.className = 'team-score' + (data.ganador === eq1 ? ' win' : '');
+    s2.className = 'team-score' + (data.ganador === eq2 ? ' win' : '');
+    document.getElementById(`${id}-row1`).className = 'team-row' + (data.ganador === eq1 ? ' winner' : '');
+    document.getElementById(`${id}-row2`).className = 'team-row' + (data.ganador === eq2 ? ' winner' : '');
+    document.getElementById(`${id}-f1`).textContent = flag(eq1);
+    document.getElementById(`${id}-f2`).textContent = flag(eq2);
+
+    const penEl = document.getElementById(`${id}-pen`);
+    penEl.textContent = data.penales ? `Pen. ${data.pen_g1}-${data.pen_g2}` : '';
+
+    btn.textContent = '✓';
+    advance(round, side, idx, data.ganador);
+    if (data.demo) toast('ℹ️ Modo demo activo');
+
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Predecir';
+    toast('❌ Error: ' + e.message);
+    console.error(e);
+  }
+}
+
+function advance(round, side, idx, ganador) {
+  if (round === 'r16') {
+    const nextId  = `m8-${side}-${Math.floor(idx/2)}`;
+    const slot    = idx % 2 === 0 ? 't1' : 't2';
+    setTeam(nextId, slot, ganador);
+    unlock(nextId);
+
+  } else if (round === 'r8') {
+    const nextId = `m4-${side}-${Math.floor(idx/2)}`;
+    const slot   = idx % 2 === 0 ? 't1' : 't2';
+    setTeam(nextId, slot, ganador);
+    unlock(nextId);
+
+  } else if (round === 'r4') {
+    const nextId = `mS-${side}`;
+    const slot   = idx === 0 ? 't1' : 't2';
+    setTeam(nextId, slot, ganador);
+    unlock(nextId);
+
+  } else if (round === 'semi') {
+    state.semi[side] = ganador;
+    document.getElementById(`finalist-${side}`).textContent = ganador;
+    if (state.semi.L && state.semi.R) {
+      document.getElementById('btn-final').disabled = false;
+    }
+  }
+}
+
+function setTeam(id, slot, nombre) {
+  const n = slot === 't1' ? 1 : 2;
+  const inp = document.getElementById(`${id}-${slot}`);
+  if (inp) { inp.value = nombre; }
+  const fl = document.getElementById(`${id}-f${n}`);
+  if (fl) fl.textContent = flag(nombre);
+}
+
+function unlock(id) {
+  const card = document.getElementById(id);
+  if (!card) return;
+  card.classList.remove('locked');
+  card.querySelectorAll('input').forEach(i => i.removeAttribute('readonly'));
+}
+
+async function runFinal() {
+  const eq1 = state.semi.L;
+  const eq2 = state.semi.R;
+  if (!eq1 || !eq2) return;
+
+  const btn = document.getElementById('btn-final');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>';
+
+  try {
+    const data = await fetch(`${API}/predecir`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({equipo1: eq1, equipo2: eq2})
+    }).then(r => r.json());
+
+    document.getElementById('finalist-L').textContent = `${eq1} ${data.g1}`;
+    document.getElementById('finalist-R').textContent = `${data.g2} ${eq2}`;
+
+    const cc = document.getElementById('champion-card');
+    cc.style.display = 'flex';
+    document.getElementById('champion-name').textContent = data.ganador.toUpperCase();
+    btn.textContent = '✓ Finalizado';
+
+    toast(`🏆 Campeón: ${data.ganador}` + (data.penales ? ` (Pen. ${data.pen_g1}-${data.pen_g2})` : ''));
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Predecir Final';
+    toast('❌ Error en la final');
+  }
+}
+
+async function predictCustom() {
+  const eq1 = document.getElementById('custom-t1').value.trim();
+  const eq2 = document.getElementById('custom-t2').value.trim();
+  if (!eq1 || !eq2) { toast('⚠️ Escribe ambos países'); return; }
+
+  const btn = document.getElementById('btn-custom-predict');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>';
+
+  try {
+    const data = await fetch(`${API}/predecir`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({equipo1: eq1, equipo2: eq2})
+    }).then(r => r.json());
+
+    if (data.error) throw new Error(data.error);
+
+    const result = document.getElementById('custom-result');
+    result.style.display = 'block';
+
+    document.getElementById('custom-team1').textContent = eq1;
+    document.getElementById('custom-team2').textContent = eq2;
+    document.getElementById('custom-goals1').textContent = data.g1;
+    document.getElementById('custom-goals2').textContent = data.g2;
+
+    const winner = data.ganador === eq1 ? `🏆 ${eq1} gana!` : `🏆 ${eq2} gana!`;
+    document.getElementById('custom-winner').textContent = winner;
+
+    const penalty = document.getElementById('custom-penalty');
+    penalty.textContent = data.penales ? `Penales: ${data.pen_g1}-${data.pen_g2}` : '';
+
+    btn.textContent = '✓';
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.textContent = 'Predecir';
+    }, 2000);
+
+  } catch(e) {
+    btn.disabled = false;
+    btn.innerHTML = 'Predecir';
+    toast('❌ Error: ' + e.message);
+  }
+}
+
+function toast(msg, ms=3500) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), ms);
+}
+
+async function checkHealth() {
+  const el = document.getElementById('model-status');
+  try {
+    const d = await fetch(`${API}/health`, {signal: AbortSignal.timeout(3000)}).then(r => r.json());
+    if (d.modelo_cargado) {
+      el.textContent = '✅ Modelo ML activo';
+      el.style.color = '#27ae60';
+    } else {
+      el.textContent = '⚠️ Modo demo';
+      el.style.color = '#e67e22';
+    }
+  } catch {
+    el.textContent = '❌ API no disponible';
+    el.style.color = '#c0392b';
+  }
+}
+
+buildBracket();
+checkHealth();
+setInterval(checkHealth, 15000);
+</script>
+</body>
+</html>

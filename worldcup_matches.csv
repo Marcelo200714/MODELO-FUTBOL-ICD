@@ -1,0 +1,191 @@
+tournament,year,stage,group,date,home_team,away_team,goals_home,goals_away,ht_goals_home,ht_goals_away,extra_time,penalties,pen_goals_home,pen_goals_away,result,venue,city,host_country
+FIFA World Cup,2018,Group Stage,A,2018-06-14,Russia,Saudi Arabia,5,0,2,0,0,0,,,H,Luzhniki Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,A,2018-06-15,Egypt,Uruguay,0,1,0,0,0,0,,,A,Ekaterinburg Arena,Ekaterinburg,Russia
+FIFA World Cup,2018,Group Stage,A,2018-06-19,Russia,Egypt,3,1,0,0,0,0,,,H,Saint Petersburg Stadium,Saint Petersburg,Russia
+FIFA World Cup,2018,Group Stage,A,2018-06-20,Uruguay,Saudi Arabia,1,0,1,0,0,0,,,H,Rostov Arena,Rostov-on-Don,Russia
+FIFA World Cup,2018,Group Stage,A,2018-06-25,Uruguay,Russia,3,0,2,0,0,0,,,H,Samara Arena,Samara,Russia
+FIFA World Cup,2018,Group Stage,A,2018-06-25,Saudi Arabia,Egypt,2,1,1,1,0,0,,,H,Volgograd Arena,Volgograd,Russia
+FIFA World Cup,2018,Group Stage,B,2018-06-15,Morocco,Iran,0,1,0,0,0,0,,,A,Saint Petersburg Stadium,Saint Petersburg,Russia
+FIFA World Cup,2018,Group Stage,B,2018-06-15,Portugal,Spain,3,3,2,1,0,0,,,D,Fisht Stadium,Sochi,Russia
+FIFA World Cup,2018,Group Stage,B,2018-06-20,Portugal,Morocco,1,0,1,0,0,0,,,H,Luzhniki Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,B,2018-06-20,Iran,Spain,0,1,0,0,0,0,,,A,Kazan Arena,Kazan,Russia
+FIFA World Cup,2018,Group Stage,B,2018-06-25,Iran,Portugal,1,1,0,1,0,0,,,D,Mordovia Arena,Saransk,Russia
+FIFA World Cup,2018,Group Stage,B,2018-06-25,Spain,Morocco,2,2,1,1,0,0,,,D,Kaliningrad Stadium,Kaliningrad,Russia
+FIFA World Cup,2018,Group Stage,C,2018-06-16,France,Australia,2,1,0,0,0,0,,,H,Kazan Arena,Kazan,Russia
+FIFA World Cup,2018,Group Stage,C,2018-06-16,Peru,Denmark,0,1,0,0,0,0,,,A,Mordovia Arena,Saransk,Russia
+FIFA World Cup,2018,Group Stage,C,2018-06-21,Denmark,Australia,1,1,1,1,0,0,,,D,Samara Arena,Samara,Russia
+FIFA World Cup,2018,Group Stage,C,2018-06-21,France,Peru,1,0,1,0,0,0,,,H,Ekaterinburg Arena,Ekaterinburg,Russia
+FIFA World Cup,2018,Group Stage,C,2018-06-26,Denmark,France,0,0,0,0,0,0,,,D,Luzhniki Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,C,2018-06-26,Australia,Peru,0,2,0,1,0,0,,,A,Fisht Stadium,Sochi,Russia
+FIFA World Cup,2018,Group Stage,D,2018-06-16,Argentina,Iceland,1,1,1,1,0,0,,,D,Spartak Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,D,2018-06-16,Croatia,Nigeria,2,0,1,0,0,0,,,H,Kaliningrad Stadium,Kaliningrad,Russia
+FIFA World Cup,2018,Group Stage,D,2018-06-21,Argentina,Croatia,0,3,0,0,0,0,,,A,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia
+FIFA World Cup,2018,Group Stage,D,2018-06-22,Nigeria,Iceland,2,0,0,0,0,0,,,H,Volgograd Arena,Volgograd,Russia
+FIFA World Cup,2018,Group Stage,D,2018-06-26,Nigeria,Argentina,1,2,0,1,0,0,,,A,Saint Petersburg Stadium,Saint Petersburg,Russia
+FIFA World Cup,2018,Group Stage,D,2018-06-26,Iceland,Croatia,1,2,0,0,0,0,,,A,Rostov Arena,Rostov-on-Don,Russia
+FIFA World Cup,2018,Group Stage,E,2018-06-17,Costa Rica,Serbia,0,1,0,0,0,0,,,A,Samara Arena,Samara,Russia
+FIFA World Cup,2018,Group Stage,E,2018-06-17,Brazil,Switzerland,1,1,1,0,0,0,,,D,Rostov Arena,Rostov-on-Don,Russia
+FIFA World Cup,2018,Group Stage,E,2018-06-22,Brazil,Costa Rica,2,0,0,0,0,0,,,H,Saint Petersburg Stadium,Saint Petersburg,Russia
+FIFA World Cup,2018,Group Stage,E,2018-06-22,Serbia,Switzerland,1,2,1,0,0,0,,,A,Kaliningrad Stadium,Kaliningrad,Russia
+FIFA World Cup,2018,Group Stage,E,2018-06-27,Serbia,Brazil,0,2,0,1,0,0,,,A,Spartak Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,E,2018-06-27,Switzerland,Costa Rica,2,2,1,0,0,0,,,D,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia
+FIFA World Cup,2018,Group Stage,F,2018-06-17,Germany,Mexico,0,1,0,1,0,0,,,A,Luzhniki Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,F,2018-06-18,Sweden,South Korea,1,0,0,0,0,0,,,H,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia
+FIFA World Cup,2018,Group Stage,F,2018-06-23,South Korea,Mexico,1,2,0,1,0,0,,,A,Rostov Arena,Rostov-on-Don,Russia
+FIFA World Cup,2018,Group Stage,F,2018-06-23,Germany,Sweden,2,1,0,1,0,0,,,H,Fisht Stadium,Sochi,Russia
+FIFA World Cup,2018,Group Stage,F,2018-06-27,South Korea,Germany,2,0,0,0,0,0,,,H,Kazan Arena,Kazan,Russia
+FIFA World Cup,2018,Group Stage,F,2018-06-27,Mexico,Sweden,0,3,0,0,0,0,,,A,Ekaterinburg Arena,Ekaterinburg,Russia
+FIFA World Cup,2018,Group Stage,G,2018-06-18,Belgium,Panama,3,0,0,0,0,0,,,H,Fisht Stadium,Sochi,Russia
+FIFA World Cup,2018,Group Stage,G,2018-06-18,Tunisia,England,1,2,1,1,0,0,,,A,Volgograd Arena,Volgograd,Russia
+FIFA World Cup,2018,Group Stage,G,2018-06-23,Belgium,Tunisia,5,2,3,1,0,0,,,H,Spartak Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,G,2018-06-24,England,Panama,6,1,5,0,0,0,,,H,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia
+FIFA World Cup,2018,Group Stage,G,2018-06-28,England,Belgium,0,1,0,0,0,0,,,A,Kaliningrad Stadium,Kaliningrad,Russia
+FIFA World Cup,2018,Group Stage,G,2018-06-28,Panama,Tunisia,1,2,1,0,0,0,,,A,Mordovia Arena,Saransk,Russia
+FIFA World Cup,2018,Group Stage,H,2018-06-19,Colombia,Japan,1,2,1,1,0,0,,,A,Mordovia Arena,Saransk,Russia
+FIFA World Cup,2018,Group Stage,H,2018-06-19,Poland,Senegal,1,2,0,1,0,0,,,A,Spartak Stadium,Moscow,Russia
+FIFA World Cup,2018,Group Stage,H,2018-06-24,Japan,Senegal,2,2,1,1,0,0,,,D,Ekaterinburg Arena,Ekaterinburg,Russia
+FIFA World Cup,2018,Group Stage,H,2018-06-24,Poland,Colombia,0,3,0,1,0,0,,,A,Kazan Arena,Kazan,Russia
+FIFA World Cup,2018,Group Stage,H,2018-06-28,Japan,Poland,0,1,0,1,0,0,,,A,Volgograd Arena,Volgograd,Russia
+FIFA World Cup,2018,Group Stage,H,2018-06-28,Senegal,Colombia,0,1,0,1,0,0,,,A,Samara Arena,Samara,Russia
+FIFA World Cup,2018,Round of 16,,2018-06-30,France,Argentina,4,3,1,1,0,0,,,H,Kazan Arena,Kazan,Russia
+FIFA World Cup,2018,Round of 16,,2018-06-30,Uruguay,Portugal,2,1,1,0,0,0,,,H,Fisht Stadium,Sochi,Russia
+FIFA World Cup,2018,Round of 16,,2018-07-01,Spain,Russia,1,1,1,1,1,1,3,4,D,Luzhniki Stadium,Moscow,Russia
+FIFA World Cup,2018,Round of 16,,2018-07-01,Croatia,Denmark,1,1,1,1,1,1,3,2,D,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia
+FIFA World Cup,2018,Round of 16,,2018-07-02,Brazil,Mexico,2,0,0,0,0,0,,,H,Samara Arena,Samara,Russia
+FIFA World Cup,2018,Round of 16,,2018-07-02,Belgium,Japan,3,2,0,0,0,0,,,H,Rostov Arena,Rostov-on-Don,Russia
+FIFA World Cup,2018,Round of 16,,2018-07-03,Sweden,Switzerland,1,0,0,0,0,0,,,H,Saint Petersburg Stadium,Saint Petersburg,Russia
+FIFA World Cup,2018,Round of 16,,2018-07-03,Colombia,England,1,1,1,0,1,1,3,4,D,Spartak Stadium,Moscow,Russia
+FIFA World Cup,2018,Quarter-final,,2018-07-06,Uruguay,France,0,2,0,1,0,0,,,A,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia
+FIFA World Cup,2018,Quarter-final,,2018-07-06,Brazil,Belgium,1,2,0,2,0,0,,,A,Kazan Arena,Kazan,Russia
+FIFA World Cup,2018,Quarter-final,,2018-07-07,Sweden,England,0,2,0,1,0,0,,,A,Samara Arena,Samara,Russia
+FIFA World Cup,2018,Quarter-final,,2018-07-07,Russia,Croatia,2,2,1,1,1,1,3,4,D,Fisht Stadium,Sochi,Russia
+FIFA World Cup,2018,Semi-final,,2018-07-10,France,Belgium,1,0,0,0,0,0,,,H,Saint Petersburg Stadium,Saint Petersburg,Russia
+FIFA World Cup,2018,Semi-final,,2018-07-11,Croatia,England,2,1,1,1,1,0,,,H,Luzhniki Stadium,Moscow,Russia
+FIFA World Cup,2018,Third Place,,2018-07-14,Belgium,England,2,0,1,0,0,0,,,H,Saint Petersburg Stadium,Saint Petersburg,Russia
+FIFA World Cup,2018,Final,,2018-07-15,France,Croatia,4,2,2,1,0,0,,,H,Luzhniki Stadium,Moscow,Russia
+FIFA World Cup,2022,Group Stage,A,2022-11-20,Qatar,Ecuador,0,2,0,2,0,0,,,A,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Group Stage,A,2022-11-21,Senegal,Netherlands,0,2,0,0,0,0,,,A,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Group Stage,A,2022-11-25,Qatar,Senegal,1,3,0,1,0,0,,,A,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Group Stage,A,2022-11-25,Netherlands,Ecuador,1,1,1,0,0,0,,,D,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,A,2022-11-29,Ecuador,Senegal,1,2,0,1,0,0,,,A,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,A,2022-11-29,Netherlands,Qatar,2,0,1,0,0,0,,,H,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Group Stage,B,2022-11-21,England,Iran,6,2,3,0,0,0,,,H,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,B,2022-11-21,USA,Wales,1,1,1,0,0,0,,,D,Ahmad bin Ali Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,B,2022-11-25,Wales,Iran,0,2,0,0,0,0,,,A,Ahmad bin Ali Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,B,2022-11-25,England,USA,0,0,0,0,0,0,,,D,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Group Stage,B,2022-11-29,Wales,England,0,3,0,0,0,0,,,A,Ahmad bin Ali Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,B,2022-11-29,Iran,USA,0,1,0,1,0,0,,,A,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Group Stage,C,2022-11-22,Argentina,Saudi Arabia,1,2,1,0,0,0,,,A,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Group Stage,C,2022-11-22,Mexico,Poland,0,0,0,0,0,0,,,D,Stadium 974,Doha,Qatar
+FIFA World Cup,2022,Group Stage,C,2022-11-26,Poland,Saudi Arabia,2,0,1,0,0,0,,,H,Education City Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,C,2022-11-26,Argentina,Mexico,2,0,0,0,0,0,,,H,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Group Stage,C,2022-11-30,Poland,Argentina,0,2,0,0,0,0,,,A,Stadium 974,Doha,Qatar
+FIFA World Cup,2022,Group Stage,C,2022-11-30,Saudi Arabia,Mexico,1,2,0,0,0,0,,,A,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Group Stage,D,2022-11-22,Denmark,Tunisia,0,0,0,0,0,0,,,D,Education City Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,D,2022-11-22,France,Australia,4,1,2,1,0,0,,,H,Al Janoub Stadium,Al Wakrah,Qatar
+FIFA World Cup,2022,Group Stage,D,2022-11-26,Tunisia,Australia,0,1,0,1,0,0,,,A,Al Janoub Stadium,Al Wakrah,Qatar
+FIFA World Cup,2022,Group Stage,D,2022-11-26,France,Denmark,2,1,0,0,0,0,,,H,Stadium 974,Doha,Qatar
+FIFA World Cup,2022,Group Stage,D,2022-11-30,Australia,Denmark,1,0,0,0,0,0,,,H,Al Janoub Stadium,Al Wakrah,Qatar
+FIFA World Cup,2022,Group Stage,D,2022-11-30,Tunisia,France,1,0,0,0,0,0,,,H,Education City Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,E,2022-11-23,Germany,Japan,1,2,1,0,0,0,,,A,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,E,2022-11-23,Spain,Costa Rica,7,0,3,0,0,0,,,H,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Group Stage,E,2022-11-27,Japan,Costa Rica,0,1,0,0,0,0,,,A,Ahmad bin Ali Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,E,2022-11-27,Spain,Germany,1,1,0,0,0,0,,,D,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Group Stage,E,2022-12-01,Japan,Spain,2,1,0,1,0,0,,,H,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,E,2022-12-01,Costa Rica,Germany,2,4,0,1,0,0,,,A,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Group Stage,F,2022-11-23,Morocco,Croatia,0,0,0,0,0,0,,,D,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Group Stage,F,2022-11-23,Belgium,Canada,1,0,1,0,0,0,,,H,Ahmad bin Ali Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,F,2022-11-27,Belgium,Morocco,0,2,0,0,0,0,,,A,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Group Stage,F,2022-11-27,Croatia,Canada,4,1,2,1,0,0,,,H,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,F,2022-12-01,Croatia,Belgium,0,0,0,0,0,0,,,D,Ahmad bin Ali Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,F,2022-12-01,Canada,Morocco,1,2,1,2,0,0,,,A,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Group Stage,G,2022-11-24,Switzerland,Cameroon,1,0,0,0,0,0,,,H,Al Janoub Stadium,Al Wakrah,Qatar
+FIFA World Cup,2022,Group Stage,G,2022-11-24,Brazil,Serbia,2,0,0,0,0,0,,,H,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Group Stage,G,2022-11-28,Cameroon,Serbia,3,3,1,2,0,0,,,D,Al Janoub Stadium,Al Wakrah,Qatar
+FIFA World Cup,2022,Group Stage,G,2022-11-28,Brazil,Switzerland,1,0,0,0,0,0,,,H,Stadium 974,Doha,Qatar
+FIFA World Cup,2022,Group Stage,G,2022-12-02,Serbia,Switzerland,2,3,2,1,0,0,,,A,Stadium 974,Doha,Qatar
+FIFA World Cup,2022,Group Stage,G,2022-12-02,Cameroon,Brazil,1,0,0,0,0,0,,,H,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Group Stage,H,2022-11-24,Uruguay,South Korea,0,0,0,0,0,0,,,D,Education City Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,H,2022-11-24,Portugal,Ghana,3,2,0,0,0,0,,,H,Stadium 974,Doha,Qatar
+FIFA World Cup,2022,Group Stage,H,2022-11-28,South Korea,Ghana,2,3,0,2,0,0,,,A,Education City Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Group Stage,H,2022-11-28,Portugal,Uruguay,2,0,0,0,0,0,,,H,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Group Stage,H,2022-12-02,Ghana,Uruguay,0,2,0,0,0,0,,,A,Al Janoub Stadium,Al Wakrah,Qatar
+FIFA World Cup,2022,Group Stage,H,2022-12-02,South Korea,Portugal,2,1,1,1,0,0,,,H,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-03,Netherlands,USA,3,1,2,0,0,0,,,H,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-03,Argentina,Australia,2,1,1,0,0,0,,,H,Ahmad bin Ali Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-04,France,Poland,3,1,1,0,0,0,,,H,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-04,England,Senegal,3,0,2,0,0,0,,,H,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-05,Japan,Croatia,1,1,1,1,1,1,1,3,D,Al Janoub Stadium,Al Wakrah,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-05,Brazil,South Korea,4,1,4,0,0,0,,,H,Stadium 974,Doha,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-06,Morocco,Spain,0,0,0,0,1,1,3,0,D,Education City Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Round of 16,,2022-12-06,Portugal,Switzerland,6,1,2,0,0,0,,,H,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Quarter-final,,2022-12-09,Croatia,Brazil,1,1,0,0,1,1,4,2,D,Education City Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Quarter-final,,2022-12-09,Netherlands,Argentina,2,2,1,0,1,1,3,4,D,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Quarter-final,,2022-12-10,Morocco,Portugal,1,0,1,0,0,0,,,H,Al Thumama Stadium,Doha,Qatar
+FIFA World Cup,2022,Quarter-final,,2022-12-10,England,France,1,2,0,1,0,0,,,A,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Semi-final,,2022-12-13,Argentina,Croatia,3,0,2,0,0,0,,,H,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2022,Semi-final,,2022-12-14,France,Morocco,2,0,1,0,0,0,,,H,Al Bayt Stadium,Al Khor,Qatar
+FIFA World Cup,2022,Third Place,,2022-12-17,Croatia,Morocco,2,1,2,1,0,0,,,H,Khalifa International Stadium,Al Rayyan,Qatar
+FIFA World Cup,2022,Final,,2022-12-18,Argentina,France,3,3,2,2,1,1,4,2,D,Lusail Stadium,Lusail,Qatar
+FIFA World Cup,2026,Group Stage,A,2026-06-11,Mexico,South Africa,2,0,1,0,0,0,,,H,Estadio Azteca,Mexico City,Mexico
+FIFA World Cup,2026,Group Stage,A,2026-06-11,South Korea,Czech Republic,2,1,0,0,0,0,,,H,Estadio Akron,Guadalajara,Mexico
+FIFA World Cup,2026,Group Stage,A,2026-06-18,Czech Republic,South Africa,1,1,1,0,0,0,,,D,Mercedes-Benz Stadium,Atlanta,USA
+FIFA World Cup,2026,Group Stage,A,2026-06-18,Mexico,South Korea,1,0,0,0,0,0,,,H,Estadio Akron,Guadalajara,Mexico
+FIFA World Cup,2026,Group Stage,A,2026-06-24,Czech Republic,Mexico,0,3,0,0,0,0,,,A,Estadio Azteca,Mexico City,Mexico
+FIFA World Cup,2026,Group Stage,A,2026-06-24,South Africa,South Korea,1,0,0,0,0,0,,,H,Estadio BBVA,Monterrey,Mexico
+FIFA World Cup,2026,Group Stage,B,2026-06-12,Canada,Bosnia & Herzegovina,1,1,0,1,0,0,,,D,BMO Field,Toronto,Canada
+FIFA World Cup,2026,Group Stage,B,2026-06-13,Qatar,Switzerland,1,1,0,1,0,0,,,D,Levi's Stadium,San Francisco,USA
+FIFA World Cup,2026,Group Stage,B,2026-06-18,Switzerland,Bosnia & Herzegovina,4,1,0,0,0,0,,,H,SoFi Stadium,Los Angeles,USA
+FIFA World Cup,2026,Group Stage,B,2026-06-18,Canada,Qatar,6,0,3,0,0,0,,,H,BC Place,Vancouver,Canada
+FIFA World Cup,2026,Group Stage,B,2026-06-24,Switzerland,Canada,2,1,0,0,0,0,,,H,BC Place,Vancouver,Canada
+FIFA World Cup,2026,Group Stage,B,2026-06-24,Bosnia & Herzegovina,Qatar,3,1,2,1,0,0,,,H,Lumen Field,Seattle,USA
+FIFA World Cup,2026,Group Stage,C,2026-06-13,Brazil,Morocco,1,1,1,1,0,0,,,D,MetLife Stadium,East Rutherford,USA
+FIFA World Cup,2026,Group Stage,C,2026-06-13,Haiti,Scotland,0,1,0,1,0,0,,,A,Gillette Stadium,Foxborough,USA
+FIFA World Cup,2026,Group Stage,C,2026-06-19,Scotland,Morocco,0,1,0,1,0,0,,,A,Gillette Stadium,Foxborough,USA
+FIFA World Cup,2026,Group Stage,C,2026-06-19,Brazil,Haiti,3,0,3,0,0,0,,,H,Lincoln Financial Field,Philadelphia,USA
+FIFA World Cup,2026,Group Stage,C,2026-06-24,Scotland,Brazil,0,3,0,2,0,0,,,A,Hard Rock Stadium,Miami,USA
+FIFA World Cup,2026,Group Stage,C,2026-06-24,Morocco,Haiti,4,2,2,2,0,0,,,H,Mercedes-Benz Stadium,Atlanta,USA
+FIFA World Cup,2026,Group Stage,D,2026-06-12,USA,Paraguay,4,1,3,0,0,0,,,H,SoFi Stadium,Los Angeles,USA
+FIFA World Cup,2026,Group Stage,D,2026-06-13,Australia,Turkey,2,0,1,0,0,0,,,H,BC Place,Vancouver,Canada
+FIFA World Cup,2026,Group Stage,D,2026-06-19,USA,Australia,2,0,2,0,0,0,,,H,Lumen Field,Seattle,USA
+FIFA World Cup,2026,Group Stage,D,2026-06-19,Turkey,Paraguay,0,1,0,1,0,0,,,A,Levi's Stadium,San Francisco,USA
+FIFA World Cup,2026,Group Stage,D,2026-06-25,Turkey,USA,3,2,2,1,0,0,,,H,SoFi Stadium,Los Angeles,USA
+FIFA World Cup,2026,Group Stage,D,2026-06-25,Paraguay,Australia,0,0,0,0,0,0,,,D,Levi's Stadium,San Francisco,USA
+FIFA World Cup,2026,Group Stage,E,2026-06-14,Germany,Curaçao,7,1,3,1,0,0,,,H,NRG Stadium,Houston,USA
+FIFA World Cup,2026,Group Stage,E,2026-06-14,Ivory Coast,Ecuador,1,0,0,0,0,0,,,H,Lincoln Financial Field,Philadelphia,USA
+FIFA World Cup,2026,Group Stage,E,2026-06-20,Germany,Ivory Coast,2,1,0,1,0,0,,,H,BMO Field,Toronto,Canada
+FIFA World Cup,2026,Group Stage,E,2026-06-20,Ecuador,Curaçao,0,0,0,0,0,0,,,D,Arrowhead Stadium,Kansas City,USA
+FIFA World Cup,2026,Group Stage,E,2026-06-25,Curaçao,Ivory Coast,0,2,0,1,0,0,,,A,Lincoln Financial Field,Philadelphia,USA
+FIFA World Cup,2026,Group Stage,E,2026-06-25,Ecuador,Germany,2,1,1,1,0,0,,,H,MetLife Stadium,East Rutherford,USA
+FIFA World Cup,2026,Group Stage,F,2026-06-14,Netherlands,Japan,2,2,0,0,0,0,,,D,AT&T Stadium,Arlington,USA
+FIFA World Cup,2026,Group Stage,F,2026-06-14,Sweden,Tunisia,5,1,2,1,0,0,,,H,Estadio BBVA,Monterrey,Mexico
+FIFA World Cup,2026,Group Stage,F,2026-06-20,Netherlands,Sweden,5,1,2,0,0,0,,,H,NRG Stadium,Houston,USA
+FIFA World Cup,2026,Group Stage,F,2026-06-20,Tunisia,Japan,0,4,0,2,0,0,,,A,Estadio BBVA,Monterrey,Mexico
+FIFA World Cup,2026,Group Stage,F,2026-06-25,Japan,Sweden,1,1,0,0,0,0,,,D,AT&T Stadium,Arlington,USA
+FIFA World Cup,2026,Group Stage,F,2026-06-25,Tunisia,Netherlands,1,3,0,2,0,0,,,A,Arrowhead Stadium,Kansas City,USA
+FIFA World Cup,2026,Group Stage,G,2026-06-15,Belgium,Egypt,1,1,0,1,0,0,,,D,Lumen Field,Seattle,USA
+FIFA World Cup,2026,Group Stage,G,2026-06-15,Iran,New Zealand,2,2,1,1,0,0,,,D,SoFi Stadium,Los Angeles,USA
+FIFA World Cup,2026,Group Stage,G,2026-06-21,Belgium,Iran,0,0,0,0,0,0,,,D,SoFi Stadium,Los Angeles,USA
+FIFA World Cup,2026,Group Stage,G,2026-06-21,New Zealand,Egypt,1,3,1,0,0,0,,,A,BC Place,Vancouver,Canada
+FIFA World Cup,2026,Group Stage,H,2026-06-15,Spain,Cape Verde,0,0,0,0,0,0,,,D,Mercedes-Benz Stadium,Atlanta,USA
+FIFA World Cup,2026,Group Stage,H,2026-06-15,Saudi Arabia,Uruguay,1,1,1,0,0,0,,,D,Hard Rock Stadium,Miami,USA
+FIFA World Cup,2026,Group Stage,H,2026-06-21,Spain,Saudi Arabia,4,0,3,0,0,0,,,H,Mercedes-Benz Stadium,Atlanta,USA
+FIFA World Cup,2026,Group Stage,H,2026-06-21,Uruguay,Cape Verde,2,2,2,1,0,0,,,D,Hard Rock Stadium,Miami,USA
+FIFA World Cup,2026,Group Stage,I,2026-06-16,France,Senegal,3,1,0,0,0,0,,,H,MetLife Stadium,East Rutherford,USA
+FIFA World Cup,2026,Group Stage,I,2026-06-16,Iraq,Norway,1,4,1,2,0,0,,,A,Gillette Stadium,Foxborough,USA
+FIFA World Cup,2026,Group Stage,I,2026-06-22,France,Iraq,3,0,1,0,0,0,,,H,Lincoln Financial Field,Philadelphia,USA
+FIFA World Cup,2026,Group Stage,I,2026-06-22,Norway,Senegal,3,2,1,0,0,0,,,H,MetLife Stadium,East Rutherford,USA
+FIFA World Cup,2026,Group Stage,J,2026-06-16,Argentina,Algeria,3,0,1,0,0,0,,,H,Arrowhead Stadium,Kansas City,USA
+FIFA World Cup,2026,Group Stage,J,2026-06-16,Austria,Jordan,3,1,1,0,0,0,,,H,Levi's Stadium,San Francisco,USA
+FIFA World Cup,2026,Group Stage,J,2026-06-22,Argentina,Austria,2,0,1,0,0,0,,,H,AT&T Stadium,Arlington,USA
+FIFA World Cup,2026,Group Stage,J,2026-06-22,Jordan,Algeria,1,2,1,0,0,0,,,A,Levi's Stadium,San Francisco,USA
+FIFA World Cup,2026,Group Stage,K,2026-06-17,Portugal,DR Congo,1,1,1,1,0,0,,,D,NRG Stadium,Houston,USA
+FIFA World Cup,2026,Group Stage,K,2026-06-17,Uzbekistan,Colombia,1,3,0,1,0,0,,,A,Estadio Azteca,Mexico City,Mexico
+FIFA World Cup,2026,Group Stage,K,2026-06-23,Portugal,Uzbekistan,5,0,3,0,0,0,,,H,NRG Stadium,Houston,USA
+FIFA World Cup,2026,Group Stage,K,2026-06-23,Colombia,DR Congo,1,0,0,0,0,0,,,H,Estadio Akron,Guadalajara,Mexico
+FIFA World Cup,2026,Group Stage,L,2026-06-17,England,Croatia,4,2,2,2,0,0,,,H,AT&T Stadium,Arlington,USA
+FIFA World Cup,2026,Group Stage,L,2026-06-17,Ghana,Panama,1,0,0,0,0,0,,,H,BMO Field,Toronto,Canada
+FIFA World Cup,2026,Group Stage,L,2026-06-23,England,Ghana,0,0,0,0,0,0,,,D,Gillette Stadium,Foxborough,USA
+FIFA World Cup,2026,Group Stage,L,2026-06-23,Panama,Croatia,0,1,0,0,0,0,,,A,BMO Field,Toronto,Canada
+FIFA World Cup,2026,Group Stage,I,2026-06-26,Norway,France,4,1,,,0,0,,,H,Gillette Stadium,Foxborough,USA
+FIFA World Cup,2026,Group Stage,I,2026-06-26,Senegal,Iraq,5,0,,,0,0,,,H,BMO Field,Toronto,USA
